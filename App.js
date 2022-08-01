@@ -1,15 +1,19 @@
+import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Navigation from './src/Navigation.js';
 import Login from './src/views/Login.js';
+import AssignedJobs from './src/views/AssignedJobs.js';
+import ContractorAvailability from './src/views/ContractorAvailability.js';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Login/>
-      <StatusBar style="auto" />
-    </View>
-  );
+function App(){
+   return(
+    <Navigation/>
+   )
 }
+
+export default App;
+
 
 const styles = StyleSheet.create({
   container: {
