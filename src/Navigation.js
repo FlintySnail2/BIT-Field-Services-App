@@ -13,7 +13,6 @@ import ContractorAvailability from './views/ContractorAvailability.js';
 const homeName = 'Home';
 const availName = 'ContractorAvailability';
 const assignName = 'AssignedJobs';
-
 const Tab = createBottomTabNavigator();
 
 
@@ -23,7 +22,7 @@ export default function Navigation(){
             <Tab.Navigator
                 initialRouteName={homeName}
                 screenOptions={({route})=> ({
-                    tabBarIcon: ({focused, color,size}) => {
+                    tabBarIcon: ({focused, color, size}) => {
                         let iconName;
                         let rn = route.name;
 
@@ -36,24 +35,21 @@ export default function Navigation(){
                         else if (rn === assignName){
                             iconName = focused ? 'settings' : 'settings-outline'
                         }
-
                         return <Ionicons name={iconName} size={size} color={color}/>
                     },
                 })}
 
-                Options={{
+                tabBarOptions={{
                     activeTintColor: 'red',
                     inactiveTintColor: 'grey',
                     labelStyle: {paddingBottom: 10, fontSize:10},
-                    style:{padding: 10, height: 70}
+                    style:{padding: 8, height: 80}
                 }}
                 >
                 <Tab.Screen name={homeName} component={Home}/>
                 <Tab.Screen name={availName} component={ContractorAvailability}/>
                 <Tab.Screen name={assignName} component={AssignedJobs}/>
-
             </Tab.Navigator>
-
         </NavigationContainer>
     )
 }
