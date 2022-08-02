@@ -41,8 +41,8 @@ export default function Navigation(){
                     },
                 })}
 
-                tabBarOptions={{
-                    activeTintColor: 'tomato',
+                Options={{
+                    activeTintColor: 'red',
                     inactiveTintColor: 'grey',
                     labelStyle: {paddingBottom: 10, fontSize:10},
                     style:{padding: 10, height: 70}
