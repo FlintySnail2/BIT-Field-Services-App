@@ -1,31 +1,45 @@
-import * as React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
+import React, { Component } from 'react';
 import externalStyle from '../styles/externalStyle.js';
 
-export default function Home({navigation}){
-    return(
-        <View style={externalStyle.screenBg}>
-            
-            {/* ROW ONE */}
-            <View style={externalStyle.rowBtn}>
-                <View style={externalStyle.rowBtn1}>
-                    <Text style={externalStyle.textStyle}>Btn1</Text>
-                </View>
-            </View>
+class Home extends Component{
+    render(){
+        return(    
+                <View style={externalStyle.screenBg}>
+                    
+                    {/* ROW ONE */}
+                    <View style={externalStyle.contBtn}>
+                        <TouchableOpacity style={[externalStyle.rowBtn,{
+                                        backgroundColor:'#009eff'}]}
+                                        onPress={()=>{
+                                        this.props.navigation.navigate('ContractorAvailability')
+                                }}>
+                            <Text style={externalStyle.textStyle}>Contractor Availability</Text>
+                        </TouchableOpacity>
+                    </View>
 
-            {/* ROW TWO */}
-            <View style={externalStyle.rowBtn}>
-                <View style={externalStyle.rowBtn2}>
-                    <Text style={externalStyle.textStyle}>Btn2</Text>
-                </View>
-            </View>
+                    {/* ROW TWO */}
+                    <View style={externalStyle.contBtn}>
+                        <TouchableOpacity style={[externalStyle.rowBtn, {
+                                        backgroundColor:'red'}]}
+                                        onPress={()=>{
+                                            this.props.navigation.navigate('AssignedJobs');
+                                        }}>
+                            <Text style={externalStyle.textStyle}>Assigned Jobs</Text>
+                        </TouchableOpacity>
+                    </View>
 
-            {/* ROW THREE */}
-            <View style={externalStyle.rowBtn}>
-                <View style={externalStyle.rowBtn3}>
-                    <Text style={externalStyle.textStyle}>Btn3</Text>
-                </View>
-            </View>
-        </View> 
-    )
+                    {/* ROW THREE */}
+                    <View style={externalStyle.contBtn}>
+                        <View style={[externalStyle.rowBtn,
+                                {backgroundColor:'orange'
+                            }]}>
+                            <Text style={externalStyle.textStyle}>Active Jobs</Text>
+                        </View>
+                    </View>
+                </View> 
+            ) 
+    }
 }
+
+export default Home;

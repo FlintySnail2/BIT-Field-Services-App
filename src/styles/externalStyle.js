@@ -4,38 +4,28 @@ const externalStyle=StyleSheet.create({
 
     //********* HOMEPAGE ***********
     
-    rowBtn:{
+    contBtn:{
         flexDirection:'row',
-        justifyContent:'space-between',
-        padding:10
+        
+        padding:20
     },
 
-    rowBtn1:{ 
-        flex:1, 
-        backgroundColor:'purple',
-        padding:20, 
-        justifyContent:'space-between'
+    rowBtn:{ 
+        flex:1,
+        margin: 'auto', 
+        padding:40, 
+        height: 200,
+        border: 1,
+        borderRadius: 10,
+        justifyContent:'space-evenly'
         },
-
-    rowBtn2:{
-        flex:1, 
-        backgroundColor:'red',
-        padding:20, 
-        justifyContent:'space-between'
-        },
-        rowBtn3:{
-            flex:1,
-            backgroundColor: 'orange',
-            padding:20,
-            justifyContent:'space-between'
-        },
-        
-        textStyle:{
-            color:'white',
-            textAlign:'center',
-            fontSize:28,
-            fontWeight:'bold'
-        },
+    
+    textStyle:{
+        color:'white',
+        textAlign:'center',
+        fontSize:28,
+        fontWeight:'bold'
+    },
 
     //******* GENERAL STYLES */
 
