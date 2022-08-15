@@ -35,8 +35,8 @@ const externalStyle=StyleSheet.create({
 
     //***** AVAILABILITIES *******/
     callToAction:{
-    flex:3,
-    backgroundColor: '#363636',
+    flex:1,
+    backgroundColor: '#fff',
     height: 50,
     padding:20
     },
@@ -52,17 +52,22 @@ const externalStyle=StyleSheet.create({
         borderRadius:10
     },
 
+    dateHeader:{
+        justifyContent:'flex-start', 
+    },
+
     cmbDate:{
         justifyContent:'center',
-        padding: 10,
-        backgroundColor:'1e1e1e',
+        paddingLeft: 20,
+        paddingRight: 20,
+        color:'#1e1e1e',
         width:200,
         height:75
     },
 
     textDate:{
-        justifyContent:'flex-start',
-        color:'white',
+        
+        color:'black',
         textAlign:'center',
         fontSize:28,
         fontWeight:'bold',
@@ -74,10 +79,8 @@ const externalStyle=StyleSheet.create({
         textAlign:'center',
         fontSize:28,
         fontWeight:'bold',
-        padding:10
-        
+        padding:10  
     },
-
 })
 
 export default externalStyle;

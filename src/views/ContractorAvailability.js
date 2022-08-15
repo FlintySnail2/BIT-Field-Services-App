@@ -1,32 +1,40 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
-import { TextInput } from 'react-native-web';
+import {View, Text, TextInput} from 'react-native';
 import externalStyle from '../styles/externalStyle.js';
 
 class ContractorAvailability extends Component {
     render(){
         return(
-            <View style={externalStyle.screenBg}>
+            <View style={externalStyle.screenBg} >
                 <View style={externalStyle.callToAction}>
-                    <View style={externalStyle.ctaContainer}>
-                        <Text style={externalStyle.textDate}>
-                            DATE
-                        </Text>
-                        <TextInput style={externalStyle.cmbDate}>
 
-                        </TextInput>
+                    {/* ADD AVAILABILITY CONTAINER */}
+                    <View style={externalStyle.ctaContainer}>
+                        <View style={externalStyle.dateHeader}>
+                            <Text style={externalStyle.textDate}>
+                                DATE
+                            </Text>
+                        </View>
+
+                        <View style={externalStyle.cmbDate}>
+                            <TextInput
+                                placeholder="Date Available"
+                                
+                                onChangeText={(text)=> this.setState({text})}>
+                                    <Text style={{fontSize: 28, color:'#fff', borderColor:'black'}}/>                                        
+                            </TextInput>
+                        </View>
+
                         <View style={externalStyle.addBtn}>
                             <Text style={externalStyle.textAddBtn}>
                                 ADD
                             </Text>
                         </View>
-                        
-                    </View>
+                    </View>  
 
-                </View>
-                
+
+                </View>  
             </View>
-
         )
     }
 }
